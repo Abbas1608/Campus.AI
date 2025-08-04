@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModelProvider
+import com.example.aichatbot.Screens.ChatScreen.ChatScreen
 
 import com.example.aichatbot.ui.theme.AiChatBotTheme
 import kotlin.jvm.java
@@ -25,15 +26,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AiChatBotTheme {
-                ChatNav()
+                ChatScreen()
             }
         }
     }
-}
-
-
-
-@Composable
-fun ChatNav(){
-    Text(text = "hello....")
 }
