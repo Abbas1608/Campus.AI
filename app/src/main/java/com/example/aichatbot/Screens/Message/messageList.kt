@@ -50,7 +50,7 @@ fun messageListUI(
                     fontSize = 14.sp,
                     color = colorResource(R.color.white),
                     modifier = Modifier
-                        .padding(15.dp)
+                        .padding(end = 25.dp, bottom = 5.dp, top = 5.dp)
                 )
             }
             //users

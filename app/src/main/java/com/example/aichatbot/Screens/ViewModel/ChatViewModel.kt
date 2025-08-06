@@ -46,6 +46,8 @@ class ChatViewModel: ViewModel(){
 
                 Log.i("ans", responses.text.toString() ?: "No response text")
             } catch (e: Exception) {
+                messageList.removeLast()
+                messageList.add(messageModel("Exception: ${e.message}","AI"))
                 Log.e("GeminiError", "Exception: ${e.message}", e)
             }
         }
