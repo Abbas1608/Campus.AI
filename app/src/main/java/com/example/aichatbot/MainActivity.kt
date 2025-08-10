@@ -6,8 +6,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
+import androidx.core.view.WindowCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.aichatbot.Screens.ChatScreen.ChatScreen
+import com.example.aichatbot.Screens.Navgation.ChatNavigation
+import com.example.aichatbot.Screens.Navgation.ChatRoutes
 import com.example.aichatbot.Screens.ViewModel.ChatViewModel
 
 import com.example.aichatbot.ui.theme.AiChatBotTheme
@@ -17,11 +20,11 @@ class MainActivity : ComponentActivity() {
     @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val ChatViewModel = ViewModelProvider(this)[ChatViewModel :: class.java]
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         enableEdgeToEdge()
         setContent {
             AiChatBotTheme {
-                ChatScreen(ChatViewModel)
+                ChatNavigation()
             }
         }
     }

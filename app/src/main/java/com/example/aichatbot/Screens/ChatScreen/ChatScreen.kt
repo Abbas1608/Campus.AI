@@ -37,11 +37,11 @@ fun ChatScreen(ViewModel: ChatViewModel) {
     var userText by remember { mutableStateOf("") }
     Column(modifier = Modifier.background(brush = VCardBrush)
         .fillMaxSize()
-        .padding(start = 20.dp, end = 15.dp, bottom = 30.dp, top = 10.dp))
+        .padding(start = 20.dp, end = 15.dp, bottom = 30.dp, top = 18.dp))
     {
         // Harder function
         ChatHarder()
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(5.dp))
 
         //logo
         Column(
